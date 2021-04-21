@@ -22,6 +22,7 @@ body{
     display: flex;
     /*centraliza o conteudo horizontal*/
     justify-content: center;
+
 } 
 
 .instagram-wrapper {
@@ -221,11 +222,57 @@ body{
     }
 }
 
-.caixa{
-    
-background-repeat: no-repeat; 
-background-attachment: scroll; 
-background-size: 16px 18px; 
-background-position: 90% 25%; 
-cursor: auto
+.todo{
+display: flex;
+flex-direction: column;
+}
+.login__container{
+    display: flex;
+    flex-direction: row;
+}
+.login__form{
+    display: flex;
+    align-items: center; /* espaços entre elementos porém na horizontal */
+    flex-direction: column; 
+    width: 50%;
+    padding: 9.3rem 0;
+    justify-content: space-between;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.login__input{ 
+    height: 48px;
+    width: 80%;
+    box-sizing: border-box;
+    padding-left: 1px;
+    border-color: gray;     
+}
+.login__entrar{
+    text-align: center;
+    align-items: center;
+    background-color: #0095f6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+    width: 80%;
+    outline: none;
+    cursor: pointer;
+    height: 48px;
+}
+.login_input-border{
+    height: 1px;
+    width: 40%;
+    margin-bottom: 16px;
+    background-color: black;
+
+}
+.divisao{
+    height: 1px;
+    width: 30%;
+    margin-bottom: 16px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
