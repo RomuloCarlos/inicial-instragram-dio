@@ -6,9 +6,10 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: sans-serif;
-    font-size: 14px;
+    
 }
 body{
+    
     /*largura*/
     width: 100%;
     /*altura minima*/
@@ -19,20 +20,23 @@ body{
     padding: 0;
     /*display:flex, contêiner flex todos elementos dentro do contêiner ficam em linha*/
     display: flex;
-    /*centraliza o conteudo*/
+    /*centraliza o conteudo horizontal*/
     justify-content: center;
 } 
 
 .instagram-wrapper {
-    /*display:flex, contêiner flex todos elementos dentro do contêiner ficam em linha*/
+    font-size: 14px;
+    /*display:flex, quando setamos contêiner flex todos elementos dentro do contêiner ficam em linha*/
     display: flex;
     align-items: center;
-    justify-content: start;
-    width: 60%;
+    /*centraliza o conteudo horizontal*/
+    justify-content: space-between;
+    width: 90%;
     height: 100vh;
 }
 
 .instagram-phone {
+    /*display:flex, quando setamos o contêiner flex todos elementos dentro do contêiner ficam em linha*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,5 +44,188 @@ body{
 }
 /* diminuir a imagem */
 .instagram-phone img {
-    height: 50rem;
+    height: 40rem;
+}
+
+.instagram-continue {
+    display: flex;
+    align-items: center; /* espaços entre elementos porém na horizontal */
+    justify-content: space-around; /* espaços entre elementos porém na vertical */
+    flex-direction: column; /*colocando os elementos como coluna influencia no space-around e alingn items */
+    width: 60%;
+    min-height: 34rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between; /* espaços entre elementos porém na vertical */
+    align-items: center; /* espaços entre elementos porém na horizontal */
+    flex-direction: column; 
+    background-color: #ffffff;
+    width: 90%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1) /*filhos nth-child(1) a numeração vai de acordo com a ordem do codigo html*/ {
+    min-height: 19rem; /*altura das caixas*/
+}
+
+.instagram-logo {
+    height: 3rem;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center; /*deixa no centro da div*/
+    border-radius: 50%; /*deixa a foto como circulo, tudo que exede fica escondido devido ao overflow*/
+    overflow: hidden; /*esconde os execessos da foto que esta fora do border*/
+}
+.profile-photo img {
+    height: 6rem;
+}
+
+.instagram-login {
+    background-color: #0095f6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.instagram-logout {
+    color: #0095f6;
+    margin-top: 1rem;
+}
+
+.not-account {
+    color: rgb(160, 160, 160);
+}
+
+.link-blue {
+    color: #0095f6;
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1) {
+    background-image: url('./img/apple-button.png');
+}
+
+.app-download:nth-child(2) {
+    background-image: url('./img/googleplay-button.png');
+
+}
+
+.geral
+{
+   
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+   
+}
+
+.rodape{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:space-between;
+    font-size: 12px;
+    width: 100%;
+    padding:0;
+    height:0px;
+}
+
+.rodp1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0;
+    background-size: cover;
+   
+}
+.rodparte2{
+    display: flex;
+    flex-direction:row;
+    cursor: pointer;
+    width: 100%;
+    padding: 0;
+}
+.rodparte3{
+    display: flex;
+    flex-direction:row;
+    cursor: pointer;
+    width: 100%;
+    padding: 30;
+}
+
+.sobre{
+    padding: 8px;
+    font-size: 10px;
+
+}
+
+/* media queries */
+
+
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+    
+    .group {
+        border: 1px solid transparent;
+    }
+}
+
+.caixa{
+    
+background-repeat: no-repeat; 
+background-attachment: scroll; 
+background-size: 16px 18px; 
+background-position: 90% 25%; 
+cursor: auto
 }
